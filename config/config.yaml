@@ -1,0 +1,143 @@
+bazaar:
+  url: "https://mb-api.abuse.ch/api/v1/"
+  data:
+    query: 'get_recent'
+    selector: '100'
+
+etda:
+  url: "https://apt.etda.or.th"
+  mapping:
+    '0-day': 'Exploit'
+    'ATM malware': 'Trojan-Banker'
+    'Auto updater': 'Downloader'
+    'Backdoor': 'Backdoor'
+    'Banking trojan': 'Trojan'
+    'Big Game Hunting': 'Trojan-Ransom'
+    'Botnet': 'Net-Worm'
+    'Credential stealer': 'Trojan-PSW'
+    'DDoS': 'Trojan-DDoS'
+    'Downloader': 'Trojan-Downloader'
+    'Dropper': 'Trojan-Dropper'
+    'Exfiltration': 'Backdoor'
+    'ICS malware': 'Virus'
+    'Info stealer': 'Trojan-PSW'
+    'Keylogger': 'Trojan-Spy'
+    'Loader': 'Trojan-Downloader'
+    'Miner': 'Trojan'
+    'POS malware': 'Trojan-Banker'
+    'Poisoning': 'Virus'
+    'Ransomware': 'Trojan-Ransom'
+    'Remote command': 'Backdoor'
+    'Rootkit': 'Rootkit'
+    'SWIFT malware': 'Trojan-Banker'
+    'Wiper': 'Virus'
+    'Worm': 'Worm'
+    'Reconnaissance': 'Monitor'
+    'Tunneling': 'Trojan-Proxy'
+    'Control panel': 'HackTool'
+
+virustotal:
+  # put your VirusTotal API Key here
+  api: ""
+  mapping:
+    "adware": "Adware"
+    "banker": "Trojan-Banker"
+    "downloader": "Trojan-Downloader"
+    "dropper": "Trojan-Dropper"
+    "fakeav": "Trojan-FakeAV"
+    "hacktool": "HackTool"
+    "miner": "Trojan"
+    "phishing": "Phishing"
+    "pua": "RiskTool"
+    "ransomware": "Trojan-Ransom"
+    "spyware": "Trojan-Spy"
+    "trojan": "Trojan"
+    "virus": "Virus"
+    "worm": "Worm"
+
+threat_level:
+  definition:
+    0: 'UNDETECTED'
+    1: 'LOW'
+    2: 'MEDIUM'
+    3: 'HIGH'
+  mapping:
+    'Spam': 1
+    'RiskTool': 1
+    'Server-Telnet': 1
+    'Server-FTP': 1
+    'Server-Proxy': 1
+    'Server-Web': 1
+    'Client-IRC': 1
+    'Client-P2P': 1
+    'Client-SMTP': 1
+    'Dialer': 1
+    'FraudTool': 2
+    'Downloader': 1
+    'Monitor': 1
+    'WebToolbar': 1
+    'NetTool': 1
+    'PSWTool': 1
+    'RemoteAdmin': 1
+    'Adware': 1
+    'Phishing': 2
+    'HackTool': 3
+    'Hoax': 2
+    'Flooder': 2
+    'IM-Flooder': 2
+    'SMS-Flooder': 2
+    'Email-Flooder': 2
+    'Spoofer': 2
+    'Constructor': 3
+    'VirTool': 3
+    'DoS': 2
+    'Trojan': 3
+    'Exploit': 3
+    'Trojan-FakeAV': 3
+    'Trojan-ArcBomb': 3
+    'Trojan-DDoS': 3
+    'Trojan-Proxy': 3
+    'Trojan-Notifier': 3
+    'Trojan-Clicker': 3
+    'Trojan-Downloader': 3
+    'Trojan-Dropper': 3
+    'Trojan-Ransom': 3
+    'Trojan-Mailfinder': 3
+    'Trojan-Spy': 3
+    'Trojan-IM': 3
+    'Trojan-SMS': 3
+    'Trojan-GameThief': 3
+    'Trojan-PSW': 3
+    'Trojan-Banker': 3
+    'Backdoor': 3
+    'Rootkit': 3
+    'Bootkit': 3
+    'Virus': 3
+    'Worm': 3
+    'IRC-Worm': 3
+    'IM-Worm': 3
+    'P2P-Worm': 3
+    'Email-Worm': 3
+    'Net-Worm': 3
+
+logger:
+  # logger settings for logging.config.dictConfig() function of package logging
+  # docs for dictionary config available here:
+  # https://docs.python.org/3/library/logging.config.html#logging-config-dictschema
+  version: 1
+  disable_existing_loggers: no
+  formatters:
+    simple:
+      format: "%(asctime)s - [%(levelname)s] - %(name)s - %(message)s"
+  handlers:
+    file:
+      class: logging.FileHandler
+      level: INFO
+      formatter: simple
+      filename: ./logs/main.log
+      mode: w
+  loggers:
+    '':
+      level: INFO
+      handlers: [file]
+      propagate: yes

@@ -1,0 +1,24 @@
+2023-11-17 17:36:36,192 - [INFO] - __main__ - config successfully parsed and logger configured
+2023-11-17 17:36:36,193 - [INFO] - __main__ - starting collector
+2023-11-17 17:36:36,614 - [INFO] - collector - start parsing 'e7c802a697bc9c56abcdf3d5f8dd53a5' on etda
+2023-11-17 17:36:36,615 - [WARNING] - collector - skipping, signature is None
+2023-11-17 17:36:36,615 - [INFO] - collector - start parsing '982688722d0d4e38978e9f1ea20e3a4e' on etda
+2023-11-17 17:36:36,615 - [WARNING] - collector - skipping, signature is None
+2023-11-17 17:36:36,615 - [INFO] - collector - start parsing '5e2e4795b4ceb115db820f4848a878a9' on etda
+2023-11-17 17:36:37,427 - [INFO] - collector - start parsing 'b56bae4a80b92481dfb956aa4f615ab1' on etda
+2023-11-17 17:36:37,427 - [WARNING] - collector - skipping, signature is None
+2023-11-17 17:36:37,427 - [INFO] - collector - start parsing '7f9385f6d43f92644396b4332aa92e03' on etda
+2023-11-17 17:36:37,427 - [WARNING] - collector - skipping, signature is None
+2023-11-17 17:36:37,427 - [INFO] - collector - start parsing 'cb3a27d3ec788b089aff106a62cfbb9b' on etda
+2023-11-17 17:36:37,427 - [WARNING] - collector - skipping, signature is None
+2023-11-17 17:36:37,428 - [INFO] - collector - start parsing 'e7c802a697bc9c56abcdf3d5f8dd53a5' on virustotal
+2023-11-17 17:36:39,316 - [INFO] - collector - start parsing '982688722d0d4e38978e9f1ea20e3a4e' on virustotal
+2023-11-17 17:36:39,724 - [INFO] - collector - start parsing '5e2e4795b4ceb115db820f4848a878a9' on virustotal
+2023-11-17 17:36:40,185 - [INFO] - collector - start parsing 'b56bae4a80b92481dfb956aa4f615ab1' on virustotal
+2023-11-17 17:36:40,667 - [ERROR] - collector - can not set field 'malware_class', error: 'popular_threat_classification'
+2023-11-17 17:36:40,667 - [ERROR] - collector - can not set field 'malware_family', error: 'popular_threat_classification'
+2023-11-17 17:36:40,667 - [INFO] - collector - start parsing '7f9385f6d43f92644396b4332aa92e03' on virustotal
+2023-11-17 17:36:40,936 - [INFO] - collector - start parsing 'cb3a27d3ec788b089aff106a62cfbb9b' on virustotal
+2023-11-17 17:36:41,451 - [INFO] - __main__ - starting combiner
+2023-11-17 17:36:41,451 - [INFO] - __main__ - starting analyzer
+2023-11-17 17:36:41,451 - [INFO] - __main__ - starting exporter
